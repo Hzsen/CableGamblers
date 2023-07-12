@@ -2,7 +2,11 @@ from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import MarketOrderRequest, GetAssetsRequest
 from alpaca.trading.enums import OrderSide, TimeInForce
 
-trading_client = TradingClient('api-key', 'secret-key')  # Replace 'api-key' and 'secret-key' with your actual keys
+# Importing the API and instantiating the REST client according to our keys
+API_KEY = "PKDUOE6VE25LU6MAX151"
+SECRET_KEY = "CrhzlmfNrxkgXYfdxwxE6YLlXlhepW9jfmkgMH9g"
+
+trading_client = TradingClient(API_KEY, SECRET_KEY, paper=True)
 
 
 def view_account_info():
